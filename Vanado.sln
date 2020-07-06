@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vanado", "Vanado\Vanado.csproj", "{E7459700-F7E3-4051-9A53-50BB65DBEB14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7459700-F7E3-4051-9A53-50BB65DBEB14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7459700-F7E3-4051-9A53-50BB65DBEB14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7459700-F7E3-4051-9A53-50BB65DBEB14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7459700-F7E3-4051-9A53-50BB65DBEB14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BC57649-5346-497F-960E-48C13B96F97B}
+	EndGlobalSection
+EndGlobal
