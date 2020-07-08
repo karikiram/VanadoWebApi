@@ -46,7 +46,7 @@ namespace Vanado.Models
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string sQuery = @"Select * FROM failure";
+                string sQuery = @"Select * FROM failure Where failure_status=false";
                 connection.Execute(sQuery);
                 return connection.Query<Failure>(sQuery);
             }
@@ -63,13 +63,23 @@ namespace Vanado.Models
             }
         }
 
+        public List<Failure> GetFailuresByMachineId(int id)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string sQuery = @"Select * FROM failure Where failure_machineid=@Id";
+                return connection.Query<Failure>(sQuery, new { Id = id }).ToList();
+            }
+        }
+
         public void UpdateFailure(Failure fail)
         {
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
                 string sQuery = @"UPDATE failure SET failure_name=@Failure_name,failure_description=@Failure_description,
-                                failure_status=@Failure_status,failure_documentation=@Failure_documentation,failure_priority=@Failure_priority";
+                                failure_status=@Failure_status,failure_documentation=@Failure_documentation,failure_priority=@Failure_priority Where failure_id=@Failure_id";
                 connection.Query(sQuery, fail);
             }
         }

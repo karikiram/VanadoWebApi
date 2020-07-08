@@ -50,7 +50,7 @@ namespace Vanado.Models
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string sQuery = @"UPDATE machine SET machine_name=@Machine_name";
+                string sQuery = @"UPDATE machine SET machine_name=@Machine_name Where machine_id=@Machine_id";
                 connection.Query(sQuery, mach);
             }
         }
